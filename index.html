@@ -25,8 +25,12 @@
 		h1, h2, h3{
 			font-weight: normal;
 		}
+		div.border{
+			border-top: 1px solid #ddd;
+		}
 		div{
-			margin: 20px 0px;
+			padding-top: 10px;
+			margin-bottom: 10px;			
 		}
 		.wrapper{
 			width: 100%;
@@ -50,14 +54,21 @@
 			display:inline-block;
 			-webkit-border-radius: 2px;
 			-moz-border-radius: 2px;
-			border-radius: 2px;								
+			border-radius: 2px;	
+			cursor:pointer;							
 		}
-		.button.blue{
+		a.button.blue{
 			background: #1B536F;
 		}
-		.button.green{
+		a.blue:hover{
+			background: #163B4D;
+		}		
+		a.button.green{
 			background: #486744;
 		}
+		a.green:hover{
+			background: #21421D;
+		}		
 		a{
 			color: #3F738E;	
 		}
@@ -80,7 +91,7 @@
 		</header>
 		<main role="main">
 			 
-			<div>
+			<div class="border">
 				<a class="" href='http://www.ncleg.net/gascripts/Help/KnowledgeBase/viewItem.pl?nID=27'>NCGA policy for emailing all legislators</a>
 			</div>
 
@@ -99,7 +110,7 @@
 		</aside>
 		<footer role="contentinfo">
 	 
-			<div>
+			<div class="border">
 				Built by <a href="http://codeforasheville.org/">Code for Asheville</a> | View the project on <a href="https://github.com/CodeForAsheville/email-all-nc-legislators">Github</a>
 			</div>
 			
