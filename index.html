@@ -27,6 +27,8 @@
 		h1, h2, h3{
 			font-weight: normal;
 		}
+
+
 		div.border{
 			border-top: 1px solid #ddd;
 		}
@@ -42,6 +44,7 @@
 			border-top: 1px solid white;
 			border-bottom: 1px solid #ddd;
 			padding: 20px;
+			padding-bottom: 0;
 			margin-top: 50px;
 			box-sizing: border-box;
 			-webkit-border-radius: 2px;
@@ -96,6 +99,86 @@
 			 border-radius: 5px;
 			 padding-top: 0;
 		}
+
+		.form-header{
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+
+
+		label{
+			cursor: pointer;
+			position: relative;
+			top: 1px;
+		}
+
+		.email-client-container{
+			background: #ddd;
+			border-radius: 5px;
+
+			/*width: 80%;*/
+			padding: 20px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		.email-client-options{
+			width: 70%;
+			margin: 0 auto;
+			padding-top: 0;
+		}
+
+		.email-client-container h2{
+			margin-top: 0;
+			margin-bottom: 0;
+			display: inline-block;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.email-client-container p{
+			margin-top: 10px;
+			margin-bottom: 0;
+			font-size: 14px;
+		}
+
+		.email-client-container > div > div{
+			text-align: left;
+			padding-top: 0;
+			margin-top: 10px;
+			margin-bottom: 0;
+			/*display: inline-block;*/
+			/*margin: 0 auto;*/
+
+
+		}
+
+		.donations{
+			padding-bottom: 10px;
+		}
+		.donations span{
+			display: inline-block;
+			position: relative;
+			top:-8px;
+			font-weight: bold;
+		}
+		.donations form{
+			display: inline-block;
+		}
+
+		.powered-by{
+			border-top: 1px solid #ddd;
+			text-align: center;
+		}
+		.powered-by h4{
+			margin: 0;
+		}
+		.powered-by img{
+			max-width: 25%;
+			display: inline-block;
+			margin: 0 auto;
+		}
 	</style>
 	
 </head>
@@ -125,10 +208,13 @@
 		</header>
 		<div class="two-col">
 			<div class="donations">
+				<span>
+					Support NC Megaphone: 
+				</span>
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 					<input type="hidden" name="cmd" value="_s-xclick">
 					<input type="hidden" name="hosted_button_id" value="6UBG8XJ6YTPSA">
-					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 				</form>
 			</div>
@@ -141,15 +227,32 @@
 			<div class="border">
 				<a class="" href='http://www.ncleg.net/gascripts/Help/KnowledgeBase/viewItem.pl?nID=27'>NCGA policy for emailing all legislators</a>
 			</div>
-
+			<div class='email-client-container'>
+				<h2>Email Client:</h2>
+				<p>
+					This changes whether email addresses are separated by common or semicolon.
+				</p>
+				<div class='email-client-options'>
+					<div>
+						<input class='email-client' id='email-client-normal' type='radio' name='email-client' value='normal' checked="checked" />
+						<label for='email-client-normal'> <strong>(Default)</strong> Apple Mail, Gmail, most other email clients</label>
+					</div>
+					<div>
+						<input class='email-client' id='email-client-outlook' type='radio' name='email-client' value='outlook' />
+						<label for='email-client-outlook'> Microsoft Outlook</label>
+					</div>
+				</div>
+				
+			</div>
+			<h1 class='form-header'>Make your voice heard!</h1>
 			<div>
-				<a class="button blue" href='mailto:John.Alexander@ncleg.net,Deanna.Ballard@ncleg.net,Chad.Barefoot@ncleg.net,Tamara.Barringer@ncleg.net,Phil.Berger@ncleg.net,Dan.Bishop@ncleg.net,Dan.Blue@ncleg.net,Danny.Britt@ncleg.net,Andrew.Brock@ncleg.net,Harry.Brown@ncleg.net,Angela.Bryant@ncleg.net,Jay.Chaudhuri@ncleg.net,Ben.Clark@ncleg.net,Bill.Cook@ncleg.net,David.Curtis@ncleg.net,Warren.Daniel@ncleg.net,Don.Davis@ncleg.net,Jim.Davis@ncleg.net,Cathy.Dunn@ncleg.net,Chuck.Edwards@ncleg.net,Joel.Ford@ncleg.net,Valerie.Foushee@ncleg.net,Rick.Gunn@ncleg.net,Kathy.Harrington@ncleg.net,Ralph.Hise@ncleg.net,Rick.Horner@ncleg.net,Jeff.Jackson@ncleg.net,Brent.Jackson@ncleg.net,Joyce.Krawiec@ncleg.net,Michael.Lee@ncleg.net,Paul.Lowe@ncleg.net,Tom.McInnis@ncleg.net,Floyd.McKissick@ncleg.net,Wesley.Meredith@ncleg.net,Paul.Newton@ncleg.net,Louis.Pate@ncleg.net,Ron.Rabin@ncleg.net,Bill.Rabon@ncleg.net,Shirley.Randleman@ncleg.net,Gladys.Robinson@ncleg.net,Norman.Sanderson@ncleg.net,Erica.Smith-Ingram@ncleg.net,Jeff.Tarte@ncleg.net,Jerry.Tillman@ncleg.net,Tommy.Tucker@ncleg.net,Terry.VanDuyn@ncleg.net,Joyce.Waddell@ncleg.net,Trudy.Wade@ncleg.net,Andy.Wells@ncleg.net,Mike.Woodard@ncleg.net'>Email all NC Senators</a>
+				<a class="button blue email-button" href='mailto:John.Alexander@ncleg.net,Deanna.Ballard@ncleg.net,Chad.Barefoot@ncleg.net,Tamara.Barringer@ncleg.net,Phil.Berger@ncleg.net,Dan.Bishop@ncleg.net,Dan.Blue@ncleg.net,Danny.Britt@ncleg.net,Andrew.Brock@ncleg.net,Harry.Brown@ncleg.net,Angela.Bryant@ncleg.net,Jay.Chaudhuri@ncleg.net,Ben.Clark@ncleg.net,Bill.Cook@ncleg.net,David.Curtis@ncleg.net,Warren.Daniel@ncleg.net,Don.Davis@ncleg.net,Jim.Davis@ncleg.net,Cathy.Dunn@ncleg.net,Chuck.Edwards@ncleg.net,Joel.Ford@ncleg.net,Valerie.Foushee@ncleg.net,Rick.Gunn@ncleg.net,Kathy.Harrington@ncleg.net,Ralph.Hise@ncleg.net,Rick.Horner@ncleg.net,Jeff.Jackson@ncleg.net,Brent.Jackson@ncleg.net,Joyce.Krawiec@ncleg.net,Michael.Lee@ncleg.net,Paul.Lowe@ncleg.net,Tom.McInnis@ncleg.net,Floyd.McKissick@ncleg.net,Wesley.Meredith@ncleg.net,Paul.Newton@ncleg.net,Louis.Pate@ncleg.net,Ron.Rabin@ncleg.net,Bill.Rabon@ncleg.net,Shirley.Randleman@ncleg.net,Gladys.Robinson@ncleg.net,Norman.Sanderson@ncleg.net,Erica.Smith-Ingram@ncleg.net,Jeff.Tarte@ncleg.net,Jerry.Tillman@ncleg.net,Tommy.Tucker@ncleg.net,Terry.VanDuyn@ncleg.net,Joyce.Waddell@ncleg.net,Trudy.Wade@ncleg.net,Andy.Wells@ncleg.net,Mike.Woodard@ncleg.net'>Email all NC Senators</a>
 			</div>
 
 			<div class="two-buttons">
-				<a class="button green" href='mailto:Jay.Adams@ncleg.net,Gale.Adcock@ncleg.net,John.Ager@ncleg.net,Kelly.Alexander@ncleg.net,Dean.Arp@ncleg.net,John.Autry@ncleg.net,Cynthia.Ball@ncleg.net,Chaz.Beasley@ncleg.net,Mary.Belk@ncleg.net,John.Bell@ncleg.net,Larry.Bell@ncleg.net,MaryAnn.Black@ncleg.net,Hugh.Blackwell@ncleg.net,John.Blust@ncleg.net,Jamie.Boles@ncleg.net,Beverly.Boswell@ncleg.net,John.Bradford@ncleg.net,Bill.Brawley@ncleg.net,William.Brisson@ncleg.net,Cecil.Brockman@ncleg.net,Mark.Brody@ncleg.net,Dana.Bumgardner@ncleg.net,Justin.Burr@ncleg.net,Deb.Butler@ncleg.net,Becky.Carney@ncleg.net,Mike.Clampitt@ncleg.net,George.Cleveland@ncleg.net,Jeff.Collins@ncleg.net,Debra.Conrad@ncleg.net,Kevin.Corbin@ncleg.net,Carla.Cunningham@ncleg.net,Ted.Davis@ncleg.net,Jimmy.Dixon@ncleg.net,Josh.Dobson@ncleg.net,Nelson.Dollar@ncleg.net,Andy.Dulin@ncleg.net,Beverly.Earle@ncleg.net,Jeffrey.Elmore@ncleg.net,John.Faircloth@ncleg.net,Jean.Farmer-Butterfield@ncleg.net,Susan.Fisher@ncleg.net,Elmer.Floyd@ncleg.net,Carl.Ford@ncleg.net,John.Fraley@ncleg.net,Terry.Garrison@ncleg.net,Rosa.Gill@ncleg.net,Ken.Goodman@ncleg.net,Charles.Graham@ncleg.net,George.Graham@ncleg.net,Holly.Grange@ncleg.net,Destin.Hall@ncleg.net,Duane.Hall@ncleg.net,Kyle.Hall@ncleg.net,Edward.Hanes@ncleg.net,Jon.Hardister@ncleg.net,Pricey.Harrison@ncleg.net,Kelly.Hastings@ncleg.net,Cody.Henson@ncleg.net,Yvonne.Holley@ncleg.net,Craig.Horn@ncleg.net,Julia.Howard@ncleg.net,Howard.Hunter@ncleg.net,Pat.Hurley@ncleg.net,Frank.Iler@ncleg.net,Verla.Insko@ncleg.net,Darren.Jackson@ncleg.net,Joe.John@ncleg.net,Linda.Johnson2@ncleg.net,Bert.Jones@ncleg.net,Brenden.Jones@ncleg.net,Jonathan.Jordan@ncleg.net,Donny.Lambeth@ncleg.net,Philip.Lehman@ncleg.net,David.Lewis@ncleg.net,Marvin.Lucas@ncleg.net,Chris.Malone@ncleg.net,Grier.Martin@ncleg.net,Susan.Martin@ncleg.net,Pat.McElraft@ncleg.net,Chuck.McGrady@ncleg.net,Allen.McNeill@ncleg.net,Graig.Meyer@ncleg.net,Mickey.Michaux@ncleg.net,Chris.Millis@ncleg.net,Rodney.Moore@ncleg.net,Tim.Moore@ncleg.net,Gregory.Murphy@ncleg.net,Garland.Pierce@ncleg.net,Larry.Pittman@ncleg.net,Larry.Potts@ncleg.net,Michele.Presnell@ncleg.net,Amos.Quick@ncleg.net,Robert.Reives@ncleg.net,Bobbie.Richardson@ncleg.net,William.Richardson@ncleg.net,Dennis.Riddell@ncleg.net,David.Rogers@ncleg.net,Stephen.Ross@ncleg.net,Jason.Saine@ncleg.net,John.Sauls@ncleg.net'>Email all NC House Members (1/2)</a>
+				<a class="button green email-button" href='mailto:Jay.Adams@ncleg.net,Gale.Adcock@ncleg.net,John.Ager@ncleg.net,Kelly.Alexander@ncleg.net,Dean.Arp@ncleg.net,John.Autry@ncleg.net,Cynthia.Ball@ncleg.net,Chaz.Beasley@ncleg.net,Mary.Belk@ncleg.net,John.Bell@ncleg.net,Larry.Bell@ncleg.net,MaryAnn.Black@ncleg.net,Hugh.Blackwell@ncleg.net,John.Blust@ncleg.net,Jamie.Boles@ncleg.net,Beverly.Boswell@ncleg.net,John.Bradford@ncleg.net,Bill.Brawley@ncleg.net,William.Brisson@ncleg.net,Cecil.Brockman@ncleg.net,Mark.Brody@ncleg.net,Dana.Bumgardner@ncleg.net,Justin.Burr@ncleg.net,Deb.Butler@ncleg.net,Becky.Carney@ncleg.net,Mike.Clampitt@ncleg.net,George.Cleveland@ncleg.net,Jeff.Collins@ncleg.net,Debra.Conrad@ncleg.net,Kevin.Corbin@ncleg.net,Carla.Cunningham@ncleg.net,Ted.Davis@ncleg.net,Jimmy.Dixon@ncleg.net,Josh.Dobson@ncleg.net,Nelson.Dollar@ncleg.net,Andy.Dulin@ncleg.net,Beverly.Earle@ncleg.net,Jeffrey.Elmore@ncleg.net,John.Faircloth@ncleg.net,Jean.Farmer-Butterfield@ncleg.net,Susan.Fisher@ncleg.net,Elmer.Floyd@ncleg.net,Carl.Ford@ncleg.net,John.Fraley@ncleg.net,Terry.Garrison@ncleg.net,Rosa.Gill@ncleg.net,Ken.Goodman@ncleg.net,Charles.Graham@ncleg.net,George.Graham@ncleg.net,Holly.Grange@ncleg.net,Destin.Hall@ncleg.net,Duane.Hall@ncleg.net,Kyle.Hall@ncleg.net,Edward.Hanes@ncleg.net,Jon.Hardister@ncleg.net,Pricey.Harrison@ncleg.net,Kelly.Hastings@ncleg.net,Cody.Henson@ncleg.net,Yvonne.Holley@ncleg.net,Craig.Horn@ncleg.net,Julia.Howard@ncleg.net,Howard.Hunter@ncleg.net,Pat.Hurley@ncleg.net,Frank.Iler@ncleg.net,Verla.Insko@ncleg.net,Darren.Jackson@ncleg.net,Joe.John@ncleg.net,Linda.Johnson2@ncleg.net,Bert.Jones@ncleg.net,Brenden.Jones@ncleg.net,Jonathan.Jordan@ncleg.net,Donny.Lambeth@ncleg.net,Philip.Lehman@ncleg.net,David.Lewis@ncleg.net,Marvin.Lucas@ncleg.net,Chris.Malone@ncleg.net,Grier.Martin@ncleg.net,Susan.Martin@ncleg.net,Pat.McElraft@ncleg.net,Chuck.McGrady@ncleg.net,Allen.McNeill@ncleg.net,Graig.Meyer@ncleg.net,Mickey.Michaux@ncleg.net,Chris.Millis@ncleg.net,Rodney.Moore@ncleg.net,Tim.Moore@ncleg.net,Gregory.Murphy@ncleg.net,Garland.Pierce@ncleg.net,Larry.Pittman@ncleg.net,Larry.Potts@ncleg.net,Michele.Presnell@ncleg.net,Amos.Quick@ncleg.net,Robert.Reives@ncleg.net,Bobbie.Richardson@ncleg.net,William.Richardson@ncleg.net,Dennis.Riddell@ncleg.net,David.Rogers@ncleg.net,Stephen.Ross@ncleg.net,Jason.Saine@ncleg.net,John.Sauls@ncleg.net'>Email all NC House Members (1/2)</a>
 				
-				<a class="button green" href='mailto:Mitchell.Setzer@ncleg.net,Phil.Shepard@ncleg.net,Michael.Speciale@ncleg.net,Bob.Steinburg@ncleg.net,Sarah.Stevens@ncleg.net,Scott.Stone@ncleg.net,Larry.Strickland@ncleg.net,John.Szoka@ncleg.net,Evelyn.Terry@ncleg.net,John.Torbett@ncleg.net,Brian.Turner@ncleg.net,Rena.Turner@ncleg.net,Harry.Warren@ncleg.net,Sam.Watford@ncleg.net,Donna.White@ncleg.net,Linda.Williams@ncleg.net,Shelly.Willingham@ncleg.net,Michael.Wray@ncleg.net,Larry.Yarborough@ncleg.net,Lee.Zachary@ncleg.net'>Email all NC House Members (2/2)</a>
+				<a class="button green email-button" href='mailto:Mitchell.Setzer@ncleg.net,Phil.Shepard@ncleg.net,Michael.Speciale@ncleg.net,Bob.Steinburg@ncleg.net,Sarah.Stevens@ncleg.net,Scott.Stone@ncleg.net,Larry.Strickland@ncleg.net,John.Szoka@ncleg.net,Evelyn.Terry@ncleg.net,John.Torbett@ncleg.net,Brian.Turner@ncleg.net,Rena.Turner@ncleg.net,Harry.Warren@ncleg.net,Sam.Watford@ncleg.net,Donna.White@ncleg.net,Linda.Williams@ncleg.net,Shelly.Willingham@ncleg.net,Michael.Wray@ncleg.net,Larry.Yarborough@ncleg.net,Lee.Zachary@ncleg.net'>Email all NC House Members (2/2)</a>
 			</div>
 			<div>
 				<small>
@@ -181,9 +284,14 @@
 		<footer role="contentinfo">
 	 
 			<div class="border">
-				Built by <a href="http://codeforasheville.org/">Code for Asheville</a> | View the project on <a href="https://github.com/CodeForAsheville/email-all-nc-legislators">Github</a>
+				Built with 💖 by <a href='https://www.prcapps.com'>PRC Applications</a> + <a href="http://codeforasheville.org/">Code for Asheville</a> | View the project on <a href="https://github.com/CodeForAsheville/email-all-nc-legislators">Github</a>
 			</div>
-			
+			<div class="powered-by">
+				<h4>Powered By</h4>
+				<a href="https://www.prcapps.com" title="PRC Applications: Shopify, Wordpress and Community Web Development in Asheville">
+					<img src="https://www.prcapps.com/wp-content/uploads/2016/03/logo_0.png">
+				</a>
+			</div>
 		</footer>
 	</div>
 	<script>
@@ -195,6 +303,43 @@
 	  ga('create', 'UA-55164398-2', 'auto');
 	  ga('send', 'pageview');
 
+	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var current_divider = ',';
+
+		$(document).on('click', '.email-client', function(){
+			var value = $(this).val();
+			var new_divider = ',';
+
+			if(value == 'outlook'){
+				new_divider = ';';
+			}
+			
+			if(current_divider != new_divider){
+				$("textarea").each(function(){
+					var text = $(this).val();
+					new_text = text.split(current_divider).join(new_divider);
+					$(this).val(new_text);
+				});
+
+				$("textarea").each(function(){
+					var text = $(this).val();
+					new_text = text.split(current_divider).join(new_divider);
+					$(this).val(new_text);
+				});
+
+				$(".email-button").each(function(){
+					var href = $(this).attr('href');
+					href = href.replace('mailto:', '');
+					new_text = href.split(current_divider).join(new_divider);
+					new_text = 'mailto:' + new_text;
+					$(this).attr('href', new_text);
+				});
+
+				current_divider = new_divider;
+			}
+		});
 	</script>
 </body>
 </html>
