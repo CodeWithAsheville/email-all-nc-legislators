@@ -1,5 +1,7 @@
 # email-all-nc-legislators
 
-Updated July 22nd, 2019
+Live site: https://www.ncmegaphone.com
 
-https://www.ncmegaphone.com
+Last updated: July 22nd, 2019
+
+Data scraper: https://github.com/conantp/ncmegaphone-data
