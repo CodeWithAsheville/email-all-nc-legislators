@@ -6,7 +6,7 @@
 	
 	<title>North Carolina Megaphone</title>
 	
-	<meta name="description" content="Use the buttons below to send a message to every state senator and house member in the NCGA. Built by Sunshine Labs!">
+	<meta name="description" content="Send a message to every state senator and house member in the NCGA. Built by Sunshine Labs!">
 	
   <!-- Mobile-friendly viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,11 +93,12 @@
 		}
 		.facebook-container{
 			 display: block;
-			 width: 100%;
 			 text-align: center;
 			 background: #ddd;
 			 border-radius: 5px;
 			 padding-top: 0;
+			 overflow: hidden;
+			 padding: 0 10px;
 		}
 
 		.form-header{
@@ -156,11 +157,10 @@
 
 		.donations{
 			padding-bottom: 10px;
+			padding-top: 0;
 		}
-		.donations span{
-			display: inline-block;
-			position: relative;
-			top:-8px;
+		.donations a{
+			display: block;
 			font-weight: bold;
 		}
 		.donations form{
@@ -182,18 +182,20 @@
 			display: inline-block;
 			margin: 0 auto;
 		}
+
+		.two-col{
+			padding-top: 0;
+		}
+
+		.updated-at{
+			font-weight: bold;
+		}
 	</style>
 </head>
 
 <body>
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=489562244433873";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>	
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0&appId=108212952601467" nonce="R5k8BOLr"></script>
  	<div class="wrapper">
 		<header role="banner">
 			<h1>
@@ -201,27 +203,30 @@
 				<br>
 				North Carolina Megaphone
 			</h1>
-			<p> 
+			<p class='updated-at'> 
 				Email list updated on 05/18/2024
 			</p>
 			<p>
-				Use the buttons below to send a message to every state senator and house member in the NCGA. 
+				Send a message to every state senator and house member in the NCGA. 
 			</p>
 		</header>
 		<div class="two-col">
 			<div class="donations">
-				<span>
-					Support NC Megaphone: 
-				</span>
-				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-					<input type="hidden" name="cmd" value="_s-xclick">
-					<input type="hidden" name="hosted_button_id" value="6UBG8XJ6YTPSA">
-					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-				</form>
+				<a href='https://opencollective.com/sunshine-labs/projects/nc-megaphone?status=projectCreated#category-CONTRIBUTE' target='_blank'>
+					Support NC Megaphone on Open Collective
+				</a>
 			</div>
 			<div class="facebook-container">
-				<div class="fb-like" data-href="https://www.facebook.com/ncmegaphone/" data-layout="standard" data-action="like" data-size="small" data-width="300" data-show-faces="true" data-share="true"></div>
+				<div class="fb-page" 
+					data-href="https://www.facebook.com/ncmegaphone/"
+					data-width="380" 
+					data-hide-cover="true"
+					data-show-facepile="false"
+					data-share="true"
+					data-action="like" 
+					data-hide-cta="true"
+					data-small-header="true"
+					></div>
 			</div>
 		</div>
 		<main role="main">
