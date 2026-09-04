@@ -2,6 +2,6 @@
 
 Live site: https://www.ncmegaphone.com
 
-Last updated: December 12th, 2019
+Last updated: September 4th, 2026
 
 Data scraper: https://github.com/conantp/ncmegaphone-data
